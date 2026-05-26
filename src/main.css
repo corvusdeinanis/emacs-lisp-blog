@@ -1,10 +1,12 @@
 
 :root {
-  --font-main: "Iosevka Aile", sans-serif;
+  --font-main: "Atkinson Hyperlegible Next", sans-serif;
   --font-main-size: 1.2rem;
 
-  --font-mono: "Iosevka Extended", monospace;
+  --font-mono:  monospace;
   --font-mono-size: 0.90em;
+
+  --font-header: "nihonium113", sans-serif;
 
   --font-color: #515151;
   --font-color-dimmed: color-mix(in oklab, var(--font-color) 70%, white);
@@ -41,6 +43,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
   color: var(--font-color-strong);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
@@ -55,11 +58,9 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   font-family: var(--font-mono);
   margin-right: 0.4em;
 }
-h2::before { content: "#"; }
-h3::before { content: "##"; }
-h4::before { content: "###"; }
-h5::before { content: "####"; }
-h6::before { content: "#####"; }
+h2::before { content: "*"; }
+h3::before { content: "**"; }
+
 
 strong, b {
   color: var(--font-color-strong);
