@@ -75,7 +75,7 @@
 (defun blog/html-postamble-common (_info)
   (concat
    "<div class=\"postamble-common\">" "\n"
-   "  <p>Emacs + ♡ + org mode + <a href='https://github.com/Martinsos/blog-in-emacs-lisp'>blog-in-emacs-lisp</a> by martinsos! | <a href='colophon.html'>Colophon</a> | Source Code </p>" "\n"
+   "  <p>Emacs + ♡ + org mode + <a href='https://github.com/Martinsos/blog-in-emacs-lisp'>blog-in-emacs-lisp</a> by martinsos! | <a href='colophon.html'>Colophon</a> | <a href='https://codeberg.org/astrobeast/emacs-lisp-blog'>Source Code</a></p>" "\n"
    "</div>" "\n"
   )
 )
