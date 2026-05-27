@@ -112,7 +112,7 @@ code, pre, kbd, samp {
 
 .code-block {
   margin: 1rem 0;
-  overflow-x: hidden;
+  overflow-x: scroll;
 
   & .code-block-info {
     padding-left: 0.5em;
