@@ -6,7 +6,7 @@
 
 (defconst
   blog/home-link
-  "<a class=\"home-link\" href=\"/\">Home</a>"
+  "<a class=\"home-link\" href=\"/\">←Back to Blog Index</a>"
 )
 
 (defconst
