@@ -6,10 +6,9 @@
   <h1 class="title">My blog</h1>
 </header>
 #+end_export
+Hey! Not sure how you got here but welcome to my digital dumpyard where I try to challenge my perfectionism by posting random ramblings that are almost always caused by lack of sleep.
 
-TODO Some intro text about me and my blog.
-
-To learn more about me, check the [[./about.org][About]] section.
+I get increasingly verbose as we get closer to the wee hours of the morning. I should get some sleep… Wait, IS THAT COFFEE?
 
 To be notified about new posts, subscribe to an src_emacs-lisp[:exports results :results raw]{(format "[[./%s][RSS feed]]" blog/rss-xml-in-dist)}.
 
@@ -35,3 +34,5 @@ To be notified about new posts, subscribe to an src_emacs-lisp[:exports results 
    "\n"
   )
 #+end_src
+
+#+lastmod: 2026-06-09 20:49:56
