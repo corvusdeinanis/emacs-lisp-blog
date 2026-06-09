@@ -1,33 +1,21 @@
 
 :root {
   --font-main: "Atkinson Hyperlegible Next", sans-serif;
-  --font-main-size: 1.2rem;
+  --font-main-size: 1.6rem;
 
   --font-mono:  monospace;
   --font-mono-size: 0.90em;
 
   --font-header: "nihonium113", sans-serif;
 
-  --font-color: #515151;
-  --font-color-dimmed: color-mix(in oklab, var(--font-color) 70%, white);
-  --font-color-strong: #333;
-  --background-color: #fafafa;
-  --code-bg-color: #f0f0f0; /* Copy of value from highlightjs CSS, keep it in sync. */
-
-  --accent-color: #ab5656;
+  --font-color: white;
+  --font-color-dimmed: #c18600;
+  --font-color-strong: #ffbf00;
+  --background-color: #180600;
+  --code-bg-color: #FF9A10;
+  --accent-color: #FF9A10;
   --accent-color-lighter: color-mix(in oklab, var(--accent-color) 70%, white);
-
-  --code-fg-color: var(--accent-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --font-color: #c9c9c9;
-    --font-color-dimmed: color-mix(in oklab, var(--font-color) 70%, black);
-    --font-color-strong: #e0e0e0;
-    --background-color: #1a1a1a;
-    --code-bg-color: #202329; /* Copy of value from highlightjs CSS, keep it in sync. */
-  }
+  --code-fg-color: black;
 }
 
 body {
@@ -42,9 +30,13 @@ body {
   line-height: 1.5;
 }
 
+body.frame{
+  min-height:100vh;
+  border:18px solid var(--accent-color);
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-header);
-  color: var(--font-color-strong);
+  color: var(--font-color);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   line-height: 1.2;
@@ -72,7 +64,7 @@ strong, b {
 
 a {
   color: var(--accent-color);
-  text-decoration: underline var(--accent-color) 2px;
+  text-decoration: underline var(--accent-color-lighter) 2px;
   &:hover {
     color: var(--accent-color-lighter);
   }
@@ -215,7 +207,7 @@ a.post-entry {
 }
 
 #postamble {
-  color: var(--font-color-dimmed);
+  color: var(--font-color-strong);
   font-size: 0.9rem;
   margin-top: 4rem;
   border-top: 1px solid;
