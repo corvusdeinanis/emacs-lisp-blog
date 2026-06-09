@@ -3,9 +3,11 @@
 
 #+begin_export html
 <header>
-  <h1 class="title">My blog</h1>
+  <h1 class="title">Astro's Ramblings</h1>
 </header>
+<a href="https://astroslair.xyz">←Main Site</a>
 #+end_export
+
 Hey! Not sure how you got here but welcome to my digital dumpyard where I try to challenge my perfectionism by posting random ramblings that are almost always caused by lack of sleep.
 
 I get increasingly verbose as we get closer to the wee hours of the morning. I should get some sleep… Wait, IS THAT COFFEE?
