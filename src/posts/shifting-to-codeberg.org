@@ -1,46 +1,36 @@
 #+TITLE: Switching to Codeberg From Github
-#+DESCRIPTION: About my difficulties switching from Github to Codeberg and why I'll do so anyway
+#+DESCRIPTION: Tiny hiccups in my journey of moving from Github to Codeberg
 #+DATE:2026-05-27
-#+lastmod: 2026-05-27 15:21:48
-#+begin_src shell
-  emacs-lisp-blog$ git remote set-url --add --push origin git@codeberg.org:astrobeast/emacs-lisp-blog.git
-  emacs-lisp-blog$ git remote set-url --add --push origin git@github.com:corvusdeinanis/emacs-lisp-blog.git
-  emacs-lisp-blog$ git push
-  Enumerating objects: 176, done.
-  Counting objects: 100% (176/176), done.
-  Delta compression using up to 16 threads
-  Compressing objects: 100% (108/108), done.
-  Writing objects: 100% (176/176), 14.46 MiB | 1.61 MiB/s, done.
-  Total 176 (delta 73), reused 156 (delta 63), pack-reused 0 (from 0)
-  remote: Resolving deltas: 100% (73/73), done.
-  To codeberg.org:astrobeast/emacs-lisp-blog.git
-   ,* [new branch]      main -> main
-  Everything up-to-date
+#+lastmod: 2026-06-12 23:44:43
 
-  emacs-lisp-blog$ git push
-  Connection closed by 217.197.84.140 port 22
-  fatal: Could not read from remote repository.
+I've had a Codeberg account for quite some time, but never really used it. I'm changing that though! A few days ago, I decided to move everything away from Github. Why? Because Github supports ICE, Microsoft sucks, and AI is being shoved down our throats. Codeberg is a non-profit, which does help. (I think most non-profits are still garbage but that's a can of worms for later).
 
-  Please make sure you have the correct access rights
-  and the repository exists.
+To quote Andrew Kelley, who [[https://ziglang.org/news/migrating-from-github-to-codeberg/][decided to migrate Zig to Codeberg]],
+#+begin_quote
+In this modern era of acquisitions, weak antitrust regulations, and platform capitalism leading to extreme concentrations of wealth, non-profits remain a bastion defending what remains of the commons.
+#+end_quote
 
-  emacs-lisp-blog$ git push origin 
-  Enumerating objects: 3, done.
-  Counting objects: 100% (3/3), done.
-  Delta compression using up to 16 threads
-  Compressing objects: 100% (2/2), done.
-  Writing objects: 100% (2/2), 247 bytes | 247.00 KiB/s, done.
-  Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
-  To codeberg.org:astrobeast/emacs-lisp-blog.git
-     533eb57..01386bb  main -> main
-  Enumerating objects: 3, done.
-  Counting objects: 100% (3/3), done.
-  Delta compression using up to 16 threads
-  Compressing objects: 100% (2/2), done.
-  Writing objects: 100% (2/2), 247 bytes | 247.00 KiB/s, done.
-  Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
-  remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-  To github.com:corvusdeinanis/emacs-lisp-blog.git
-     533eb57..01386bb  main -> main
+Right now, my code is on both Github and Codeberg, and I'm maintaining both remotes. I'll soon stop pushing to Github though. There is a slight problem though - most of the times, I can't push to Codeberg. Not on my first try at least!
+
+#+begin_src
+emacs-lisp-blog $ git push
+Connection closed by 217.197.84.140 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights and the repository exists.
 #+end_src
 
+trying again immediately however gives me this
+#+begin_src shell
+emacs-lisp-blog $ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 247 bytes | 247.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+To codeberg.org:astrobeast/emacs-lisp-blog.git
+   533eb57..01386bb  main -> main
+#+end_src
+
+Sometimes, it takes more than two or three tries. But honestly, it's worth knowing that I don't have to depend on Github.

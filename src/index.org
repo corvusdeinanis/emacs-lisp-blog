@@ -1,5 +1,6 @@
-#+TITLE:My blog
+#+TITLE:Astro's Ramblings
 #+OPTIONS: title:nil html-heading-anchors:nil
+#+lastmod: 2026-06-12 23:17:05
 
 #+begin_export html
 <header>
@@ -8,13 +9,12 @@
 <a href="https://astroslair.xyz">←Main Site</a>
 #+end_export
 
-Hey! Not sure how you got here but welcome to my digital dumpyard where I try to challenge my perfectionism by posting random ramblings that are almost always caused by lack of sleep.
-
-I get increasingly verbose as we get closer to the wee hours of the morning. I should get some sleep… Wait, IS THAT COFFEE?
+Welcome to my digital dumpyard where I try to challenge my perfectionism by posting random ramblings that are almost always caused by lack of sleep. I get increasingly verbose as we get closer to the wee hours of the morning. I should get some sleep… Wait, IS THAT COFFEE?
 
 To be notified about new posts, subscribe to an src_emacs-lisp[:exports results :results raw]{(format "[[./%s][RSS feed]]" blog/rss-xml-in-dist)}.
 
-* Posts | [[./jots.html][Jots]]
+You should check out my main site if you haven't already!
+* Posts | [[./memos.html][Memos]]
 #+begin_src emacs-lisp :exports results :results html
   (mapconcat
    (lambda (p)
@@ -36,5 +36,3 @@ To be notified about new posts, subscribe to an src_emacs-lisp[:exports results 
    "\n"
   )
 #+end_src
-
-#+lastmod: 2026-06-09 20:49:56

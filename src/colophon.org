@@ -1,0 +1,40 @@
+#+TITLE:Colophon
+#+lastmod: 2026-06-12 23:26:32
+(Psst. The source code for my [[https://codeberg.org/astrobeast/astroslair][main site]] and [[https://codeberg.org/astrobeast/emacs-lisp-blog][blog]] are both open-sourced if you wanna take a look-see!)
+* What Does This Site Use?
+My code is hosted on [[https://codeberg.org][Codeberg]]. I use [[https://www.netlify.com/][Netlify]] to host my websites.
+
+I've tried to make a very minimal site, both in terms of aesthetics as well as resources. I find most Static Site Generators (SSG) a bit bulky with a lot of overhead that I don't want to deal with.
+
+For my main site, I use Daniil Baturin's [[https://soupault.net][Soupault]]. For my blog, I use Martin Šošić's [[https://github.com/Martinsos/blog-in-emacs-lisp][Blog In Emacs Lisp]].
+Both are simple yet elegant. You should check them out!
+
+My main site ([[https://astroslair.xyz][Astro's Lair]]) was written (and re-written) in semantic HTML, no frameworks. At one point, Astro's Lair did use Bootstrap, and then the minimal version of [[https://picocss.com/][Pico CSS]].
+**  Keeping It Lean
+I'm able to keep my site lean by:
+1. Not using a lot of media.
+   * If it is absolutely necessary, optimize the crap out of all media.
+2. Not using fancy javascript libraries
+   * The site uses very minimal javascript. I use [[https://umami.is/][Umami]] to see how many people visit my little space on the Interwebz. It makes me happy! Other than that, I use js to let the user toggle an "easy to read" mode.
+3. Using a maximum of 2 fonts, with subsetting.
+   * [[https://the-sustainable.dev/a-guide-to-subsetting-fonts/][Subsetting]] fonts helps optimize fonts! This helps shave off few kB. Be careful though, because you might need some of those characters! 
+
+Graphics, if any, are either frankenstein versions of various CC0 artwork I've amassed over the years, or completely made by me. Both of those are possible thanks to [[https://www.gimp.org/][GIMP]].
+**  Inspiration
+The site draws inspiration from an era that I haven't lived in, and don't even belong to. I've redirected by nostalgia for the computers I grew up with and gave it an amber-tinted varnish. I have a lot of respect for clean, text-driven interfaces and everything cyberpunk (not the CDPR game, but the boring dystopia we live in), which may bleed into this site.
+
+The main site drew heavily from this amazing [[https://codepen.io/somethingformed/pen/raWJXV][Codepen]], which is marked CC0. 
+
+P.S. - I try to credit everything, but if there are any omissions, I'll correct them as soon as I find out!
+* TLDR: Tools I Use
+- Soupault
+- Blog-in-Emacs-Lisp
+- Emacs
+- Firefox
+- GNU/Linux
+- Umami
+- GIMP
+- Codeberg
+- Netlify
+* Fonts Used
+For headings, I use UkiyoMoji's [[https://www.1001fonts.com/nihonium113-font.html][Nihonium113]] for the beautiful retro look. For everything else, I use [[https://www.brailleinstitute.org/freefont/][Atkinson Hyperlegible Next]], because it has glyphs that are distinct. This makes it easier for low vision readers when compared to other fonts. Wherever monospace is needed (code blocks, for instance), your system's default monospace font is used. 
