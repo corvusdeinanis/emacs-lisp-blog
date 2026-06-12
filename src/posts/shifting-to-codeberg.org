@@ -1,7 +1,7 @@
 #+TITLE: Switching to Codeberg From Github
 #+DESCRIPTION: Tiny hiccups in my journey of moving from Github to Codeberg
 #+DATE:2026-05-27
-#+lastmod: 2026-06-12 23:44:43
+#+lastmod: 2026-06-13 00:14:27
 
 I've had a Codeberg account for quite some time, but never really used it. I'm changing that though! A few days ago, I decided to move everything away from Github. Why? Because Github supports ICE, Microsoft sucks, and AI is being shoved down our throats. Codeberg is a non-profit, which does help. (I think most non-profits are still garbage but that's a can of worms for later).
 
@@ -34,3 +34,12 @@ To codeberg.org:astrobeast/emacs-lisp-blog.git
 #+end_src
 
 Sometimes, it takes more than two or three tries. But honestly, it's worth knowing that I don't have to depend on Github.
+
+Edit: Codeberg Status posted [[https://social.anoxinon.de/@codebergstatus/116642622950762159][this]] on Mastodon on :
+#+begin_quote
+You might have noticed that SSH connections are no longer being served at the moment.
+
+As part of our investigation into the most recent slowness of Codeberg (which usually results in 504s being given), we have temporarily stopped those. This confirms a suspicion of ours that SSH connections have become, for whatever reason, heavy on the CPU.
+
+We will resume serving SSH connections with a smaller queue to preserve the availability of Codeberg.
+#+end_quote
