@@ -6,5 +6,5 @@ This blog uses Martin Sosic's excellent [[https://github.com/Martinsos/blog-in-e
 I appreciate the lean, minimal setup and the fact that this plays well with Emacs.
 
 * Publishing Posts
-I have a section in my org directory for blog posts (~/org/blog~). I use an elisp function to sync changes from the blog folder to the ~/posts~ folder in the repo directory, and also trigger a ~make build-clean~ for good measure. I then use Netlify to deploy my site. 
+I have a section in my org directory for blog posts (~/org/blog~). I use an elisp function to sync changes from the blog folder to the ~/src/posts~ folder in the repo directory, and also trigger a ~make build-clean~ for good measure. I then use Netlify to publish the ~/dist~ directory.   
 
