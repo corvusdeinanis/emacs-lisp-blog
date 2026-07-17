@@ -1,66 +1,10 @@
 #+TITLE: My blog
 
-* TODO INITIAL SETUP 👈
-  - [ ] Clone this repo. Run ~make~ to build it and ~make serve~ to serve it: the blog is running!
-  - [ ] Search the project for "todo" (case insensitive) to locate generic placeholders and fill them in (or do it later).
-  - [ ] Design (css and fonts) is exactly the same as from my personal blog (https://martinsos.com), from which this template is derived, so if you wish to change it a bit for yourself, I would be grateful :). If not, hey, at least I will be proud knowing you used this template when I see your blog in the wild!
-  - [ ] That is it! This is now your blog in Emacs Lisp. Delete this heading, then read the rest of the README to learn about the project and how to run it. If you will be making the blog source public, consider adding a link to this template repo to the mentions/credits.
+* My Blog
+This blog uses Martin Sosic's excellent [[https://github.com/Martinsos/blog-in-emacs-lisp][blog-in-emacs-lisp]]. For more details about my blog in particular, you can refer to the [[https://blog.astroslair.xyz/posts/colophon][Colophon]] on my site.
 
-[[./blog-preview.png]]
+I appreciate the lean, minimal setup and the fact that this plays well with Emacs.
 
-* Design principles
-- *Minimal*: small set of core features, simple structure, simple design. Focus on content, not features.
-- *Evergreen*: using a small set of mature, stable tech (Emacs, bash, Makefile, html/css). Minimal/no external dependencies. Minimal updating/maintenance needed.
+* Publishing Posts
+I have a section in my org directory for blog posts (~/org/blog~). I use an elisp function to sync changes from the blog folder to the ~/posts~ folder in the repo directory, and also trigger a ~make build-clean~ for good measure. I then use Netlify to deploy my site. 
 
-* Main features
-- Any page can be written in Org mode and is converted to html via =ox-publish= built-in Emacs package.
-- Build pipeline is fully written in Emacs Lisp, uses no external packages, is decoupled from any Emacs config used to edit the blog, and produces a simple static web site.
-- Main page, about page, posts, jots (microblogging).
-- Auto-generated list of posts on the main page.
-- Auto-generated RSS feed.
-- Auto-generated anchor link for each heading.
-- Minimal CSS for modern, minimal look.
-- Nice fonts (Iosevka) + instructions how to set up any other.
-- Rich code highlighting (highlight.js) with additional custom support for Emacs Lisp.
-- Short utility scripts (tools) for manually optimizing images and fonts.
-- Optimized for SEO / performance (to a practical degree).
-
-* Code overview
-- =src/= - all the source material that makes up the blog: pages, posts, html layouts, css, js, images, ...
-  - There is a common =layout.el= , and then there is a post-specific =layout-post.el=.
-- =build/= - build pipeline: logic (mostly) in elisp that takes all from =src/= and produces a web page from it in =dist/=.
-- =dist/= - an actual blog that can be published (distributed) as a web page.
-- =tools/= - helper tooling, like image optimization and font subsetting.
-
-* Development / writing
-** Build commands
-- ~make serve~ to run a simple dev server that hosts the built blog (in =dist/=) on =localhost=.
-- ~make build-inc~ (or just ~make~) to generate/build the blog from =src/= in =dist/=.
-  This is incremental build, so deleted files will remain around and state in =dist/= can become wrong with time due to that, but is fast and practical for development.
-- ~make build-clean~ to generate/build the blog from =src/= from scratch in =dist/=.
-  This is clean build, therefore slow because it first deletes all from =dist/=, but it guarantees that contents of =dist/= will correctly correspond to contents from =src/=. Slow, but guarantees correctness.
-
-**  Typical workflow
-- Create new or edit existing post in =src/posts/=. Its images/assets goes into the dir next to it with the same name as the post file.
-- When adding an image, run ~tools/optimize-image.sh path/to/image.png~ to produce a =.webp= next to it, and reference the =.webp= from the org file.
-  The build only copies =.webp= images to =dist/=; the original =.png=/=.jpg= is kept in the repo as a master but is not published.
-- ~make serve~ once in the terminal at the start of the writing session
-- ~project-compile~ (or ~project-recompile~ on later calls) to re-build the project from emacs as needed while editing the file
-- ~make build-clean~ when preparing to publish the blog.
-
-* Publishing
-First, I should make sure that content in =dist/= is what I want to publish.
-Normally I do ~make build-clean~ and then ~make serve~ to verify it is all looking good.
-
-Then, ~make publish~ to publish the contents of =dist/=!
-
-Currently this blog deploys to Cloudflare, but can as easily be deployed to any static content hosting (provider).
-
-* Misc
-- For the sake of simplicity, I on purpose don't have =sitemap.xml=, since this blog is simple enough and well internally linked that having one wouldn't bring any value.
-
-* AI usage
-This project is not vibe coded or AI driven. AI is a useful tool and I/we do use it, but every line of code, every detail and every decision in this project is owned by a human and code quality is maintained to reasonably high standards.
-
-* Mentions
-Initial idea and push for implementing this blog primarily in Emacs Lisp and Org mode came from this great video from System Crafters: [[https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/][Build Your Website with Org Mode]].
