@@ -3,3 +3,6 @@
 .last_build_info
 .wrangler/
 *.local.json
+
+.netlify
+node_modules
