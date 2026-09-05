@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       f10ca89a-d2e5-4ff1-8f0b-a32d2cd9106f
+:END:
+#+title: AI as a Black Box
+#+created: 2026-08-25
+#+date: 2026-08-25
+#+filetags: :thoughts:
+#+lastmod: 2026-09-05 13:55:24
+#+begin_note
+For the scope of this entry, I've used the terms "artificial intelligence" and "large language models" interchangeably, echoing the pattern displayed in wider discourse.  
+#+end_note
+People liken AI to calculators, typewriters, computers, etc, but those are not analogous! Not in the slightest. For the sake of argument, I will ignore the massive ecological cost of AI and pretend related computation is as trivial as your typical calculator. 
+
+You see, calculators do improve productivity and make things easier like AI, but it is transparent in terms of what it does. We punch in numbers, decide the operation, and get results. Calculator's scope is very narrow; it does nothing novel.
+
+Calculators are also very objective. A (good) calculator will (should) output the same result if the same calculation is done. LLMs do not share this. Of course, you could control all the variables very tightly - have the same seed, same prompt, same model parameters, same model, same quantization, same etc.  
+
+AI makes certain things easier, but the calculations it does are completely opaque to most of us.
+
+So, to compare LLMs to calculators is not a very fair comparison. Calculators need a certain familiarity with math to operate. I'm all for lowering barriers of entry, but claiming that AI is the new calculator or the new typewriter is very wrong.
