@@ -14,7 +14,7 @@ Welcome to my digital dumpyard where I try to challenge my perfectionism by post
 To be notified about new posts, subscribe to an src_emacs-lisp[:exports results :results raw]{(format "[[./%s][RSS feed]]" blog/rss-xml-in-dist)}.
 
 You should check out my main site if you haven't already!
-* Posts | [[./memos.html][Memos]]
+* Posts | [[./memos.html][Mini Thought Dump]]
 #+begin_src emacs-lisp :exports results :results html
   (mapconcat
    (lambda (p)

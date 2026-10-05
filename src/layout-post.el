@@ -23,8 +23,6 @@
 (defun blog/html-postamble-post (info)
   (concat
    "<div class=\"postamble-post\">" "\n"
-   "   Go " blog/home-link " for more of my writing!" "\n"
-   "  </p>" "\n"
    "</div>" "\n"
    (blog/html-postamble-common info) "\n"
   )
