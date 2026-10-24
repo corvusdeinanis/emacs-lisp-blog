@@ -184,13 +184,8 @@ a.post-entry {
   & time {
     white-space: nowrap;
     color: var(--font-color-dimmed);
-    &::after {
-      content: ";";
-      margin-left: 0.5rem;
-      color: var(--accent-color);
-      font-weight: bold;
-    }
-  }
+    padding-right: 1rem;
+   }
 
   & .post-entry-title {
     margin: 0;
