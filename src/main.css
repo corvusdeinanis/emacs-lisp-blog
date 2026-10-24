@@ -201,7 +201,7 @@ a.post-entry {
   color: var(--font-color-dimmed);
 }
 
-#postamble {
+footer {
   color: var(--font-color-strong);
   font-size: 1rem;
   margin-top: 4rem;
