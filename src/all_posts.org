@@ -1,0 +1,27 @@
+#+begin_export html
+<header>
+  <h1 class="title">All Posts</h1>
+</header>
+#+end_export
+
+#+begin_src emacs-lisp :exports results :results html
+  (mapconcat
+   (lambda (p)
+     (let ((date-str (format-time-string "%Y-%m-%d" (plist-get p :date)))
+           (title (plist-get p :title))
+           (filename (plist-get p :filename)))
+       (format (concat "<a class=\"post-entry\" href=\"./posts/%s\">"
+                       "  <time datetime=\"%s\">%s</time>"
+                       "  <b class=\"post-entry-title\">%s</b>"
+                       "</a>")
+               (string-replace ".org" ".html" filename)
+               date-str
+               date-str
+               title
+       )
+     )
+   )
+   blog/all-posts 
+   "\n"
+  )
+#+end_src

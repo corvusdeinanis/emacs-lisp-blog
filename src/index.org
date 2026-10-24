@@ -14,7 +14,7 @@ Welcome to my digital dumpyard where I try to challenge my perfectionism by post
 To be notified about new posts, subscribe to an src_emacs-lisp[:exports results :results raw]{(format "[[./%s][RSS feed]]" blog/rss-xml-in-dist)}.
 
 You should check out my main site if you haven't already!
-* Posts | [[./memos.html][Mini Thought Dump]]
+* Latest Posts 
 #+begin_src emacs-lisp :exports results :results html
   (mapconcat
    (lambda (p)
@@ -32,7 +32,9 @@ You should check out my main site if you haven't already!
        )
      )
    )
-   blog/all-posts ; Global variable with metadata of all the posts.
+   (seq-take blog/all-posts 5) ;; returns only the 5 latest posts!
    "\n"
   )
 #+end_src
+
+*[[file:all_posts.html][View all posts]]*
