@@ -1,10 +1,11 @@
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
   font-display: swap;
-    src: url('Atkinson-Hyperlegible-Next-subset.woff2') format('woff2');
+  src: url('Atkinson-Hyperlegible-Next-subset.woff2') format('woff2');
 }
 @font-face {
   font-family: 'nihonium113';
   font-display: swap;
-    src: url('nihonium113.woff2') format('woff2');
+  src: url('nihonium113.woff2') format('woff2');
+  size-adjust: 131.8%;
 }
