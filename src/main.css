@@ -7,7 +7,7 @@
   --font-mono-size: 0.90em;
 
   --font-header: "nihonium113", sans-serif;
-
+  
   --font-color: white;
   --font-color-dimmed: #c18600;
   --font-color-strong: #ffbf00;
@@ -39,10 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--font-color);
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  /* line-height: 1.2; */
-}
-h1 {
-  /* margin-top: 1em; */
+  font-smooth: never;
+  -webkit-font-smoothing: none;
 }
 
 h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
@@ -52,7 +50,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 }
 h2::before { content: "*"; }
 h3::before { content: "**"; }
-
 
 strong, b {
   color: var(--font-color-strong);
